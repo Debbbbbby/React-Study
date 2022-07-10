@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
@@ -40,8 +42,22 @@ function App() {
         <h4>{ 글제목[2] }</h4>
         <p>2022-07-09 발행</p>
       </div>
+      <Modal/>
     </div>
   );
 }
-
+// const Modal = () => { // 이런식으로 작성해도 됨
+//   return (
+//     <div></div>
+//   )
+// }
+function Modal(){ // 하나의 div만 담을 것
+  return (
+    <div className="modal">
+        <h4>제목</h4>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+  )
+}
 export default App;
